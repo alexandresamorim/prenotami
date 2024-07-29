@@ -1,6 +1,6 @@
 import { Telegraf } from 'telegraf'
 
-export const bot = new Telegraf('7035764278:AAGBTYjOnPc2uXrCj6LTBcf9wSC3IGKnZ2o')
+export const bot = new Telegraf('token_bot')
 
   // const bot = new Telegraf('TOKEN')
   // bot.start(ctx => ctx.reply('Welcome'))

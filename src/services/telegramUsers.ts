@@ -1,1 +1,1 @@
-export const telegramUsers = ['-4286703105'] 
+export const telegramUsers = ['chat_id'] 

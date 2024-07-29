@@ -18,8 +18,7 @@ export const passportAppointmentIsAvailable = async (
     await page.waitForLoadState('load')
     await page.locator('#dataTableServices > tbody > tr:nth-child(3) > td:nth-child(4) > a').click()
     await page.waitForLoadState('load')
-    //await page.locator(PRONOTAMI_AG_URL).click()
-    //await page.waitForLoadState('load')
+
     const text = await page
       .locator('.jconfirm-content > div')
       .innerText()
@@ -46,11 +45,13 @@ export const passportAppointmentIsAvailable = async (
       await page.locator('.jconfirm-buttons > button').click()
     }
 
+    result.mensagem = text;
     result.sucess = !(
       text ===
       "Stante l'elevata richiesta i posti disponibili per il servizio scelto sono esauriti. Si invita a controllare con frequenza la disponibilità in quanto l’agenda viene aggiornata regolarmente"
     );
-    result.mensagem = 'Dada a elevada procura, as vagas disponíveis para o serviço escolhido encontram-se esgotadas. Convidamos você a verificar a disponibilidade com frequência, pois a agenda é atualizada regularmente';
+
+    
 
     return result;
   } catch (error) {

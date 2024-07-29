@@ -50,7 +50,7 @@ const main = async () => {
         }
         else {countError++}
 
-        if (countError >= 1) {
+        if (countError >= 2) {
           throw new Error('Reinicia aplicação.')
         }
       } catch (error) {
